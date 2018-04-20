@@ -1,0 +1,14 @@
+#!/bin/sh
+ 
+ssh rajish@192.168.5.166 <<EOF
+  cd ~/hello-cicd
+  git pull
+  npm install --production
+  forever restartall
+  exit
+EOF
+
+
+
+
+
